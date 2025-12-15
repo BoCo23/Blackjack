@@ -19,6 +19,6 @@ class Deck:
 
     def next_card(self):
         if len(self.deck) == 0: # check if the deck is empty
-            return None # returning none if it is
+            raise Exception('No more cards')
         else:
             return self.deck.pop(0) # else popping the next card

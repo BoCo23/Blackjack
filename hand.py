@@ -14,7 +14,11 @@ class Hand:
         return string_output
 
     def draw_card(self):
-        self.add_card(self.deck.next_card())
+        try:
+            self.add_card(self.deck.next_card())
+        except Exception:
+            pass
+        # what happens when no cards left
 
     def draw_x_cards(self, x): # used to draw multiple cards
         for i in range(x):
