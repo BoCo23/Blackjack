@@ -16,3 +16,8 @@ class Deck:
             string_output += str(card.get_symbol()) + ' '
         return string_output
 
+    def next_card(self):
+        if len(self.deck) == 0:
+            return None
+        else:
+            return self.deck.pop(0)
