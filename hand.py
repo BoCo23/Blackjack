@@ -1,11 +1,10 @@
 from card import Card
-from deck import Deck
 
 class Hand:
     def __init__(self, deck, length=0):
         self.hand = []
         self.deck = deck
-        if length != 0:
+        if length != 0: # if a length was specified, draw those cards
             self.draw_x_cards(length)
 
     def __str__(self):
@@ -17,7 +16,7 @@ class Hand:
     def draw_card(self):
         self.add_card(self.deck.next_card())
 
-    def draw_x_cards(self, x):
+    def draw_x_cards(self, x): # used to draw multiple cards
         for i in range(x):
             self.draw_card()
 
